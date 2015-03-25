@@ -13,3 +13,7 @@ I use this cheat sheet for the practical part of my git talks/trainings. <sup>[[
 ## [IANA's HTTP method registry](http/iana-http-method-registry.pdf?raw=true) & [RFC 7231 HTTP status codes](http/rfc7231-http-status-codes.pdf?raw=true)
 
 Just to [rest](http://en.wikipedia.org/wiki/Representational_state_transfer) assured. <sup>[[source]](http://www.iana.org/assignments/http-methods/http-methods.xhtml) & [[source]](http://tools.ietf.org/html/rfc7231)</sup>
+
+## [Rich Hickey's Toolkits](rich-hickey/rich-hickey-toolkits.pdf?raw=true)
+
+Who doesn't love Rich Hickey? <sup>[[source]](http://infoq.com/presentations/Simple-Made-Easy)</sup>
