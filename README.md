@@ -17,3 +17,7 @@ Just to [rest](http://en.wikipedia.org/wiki/Representational_state_transfer) ass
 ## [Rich Hickey's Toolkits](rich-hickey/rich-hickey-toolkits.pdf?raw=true)
 
 Who doesn't love Rich Hickey? <sup>[[source]](http://infoq.com/presentations/Simple-Made-Easy)</sup>
+
+## [cURL for RESTful API testing](curl/curl-for-restful-api-testing.pdf?raw=true)
+
+I don't use any fancy GUI for testing my RESTful APIs. <sup>[[source]](http://blogs.plexibus.com/2009/01/15/rest-esting-with-curl)</sup>
