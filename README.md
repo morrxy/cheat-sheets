@@ -2,22 +2,22 @@
 
 These are some cheat sheets used (and sometimes made) by me.
 
-## [StyleCop's C# order guideline](csharp/stylecop-csharp-order-guideline.pdf?raw=true)
+## [StyleCop's C# order guideline](StyleCop's C%23 order guideline.md)
 
-I follow those when programming in C#. <sup>[[source]](http://stylecop.com/docs/SA1201.html)</sup>
+I follow those when programming in C#.
 
-## [GitHub's git cheat sheet](git/github-git-cheat-sheet.pdf)
+## [GitHub's git cheat sheet](https://help.github.com/articles/git-cheatsheet)
 
-I use this cheat sheet for the practical part of my git talks/trainings. <sup>[[source]](https://help.github.com/articles/git-cheatsheet)</sup>
+I use this cheat sheet for the practical part of my git talks/trainings.
 
-## [IANA's HTTP method registry](http/iana-http-method-registry.pdf?raw=true) & [RFC 7231 HTTP status codes](http/rfc7231-http-status-codes.pdf?raw=true)
+## [IANA's HTTP method registry](IANA's HTTP method registry.md) & [RFC 7231 HTTP status codes](RFC 7231 HTTP status codes.md)
 
-Just to [rest](http://en.wikipedia.org/wiki/Representational_state_transfer) assured. <sup>[[source]](http://www.iana.org/assignments/http-methods/http-methods.xhtml) & [[source]](http://tools.ietf.org/html/rfc7231)</sup>
+Just to [rest](http://en.wikipedia.org/wiki/Representational_state_transfer) assured.
 
-## [Rich Hickey's Toolkits](rich-hickey/rich-hickey-toolkits.pdf?raw=true)
+## [Rich Hickey's Toolkits](Rich Hickey's Toolkits.md)
 
-Who doesn't love Rich Hickey? <sup>[[source]](http://infoq.com/presentations/Simple-Made-Easy)</sup>
+Who doesn't love Rich Hickey?
 
-## [cURL for RESTful API testing](curl/curl-for-restful-api-testing.pdf?raw=true)
+## [cURL for RESTful API testing](cURL for RESTful API testing.md)
 
-I don't use any fancy GUI for testing my RESTful APIs. <sup>[[source]](http://blogs.plexibus.com/2009/01/15/rest-esting-with-curl)</sup>
+I don't use any fancy GUI for testing my RESTful APIs.
