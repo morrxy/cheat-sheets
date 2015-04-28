@@ -3,46 +3,46 @@
 **Safe** methods don’t modify resources.
 **Idempotent** methods can be called many times without different outcomes.
 
-Method name                           | Safe | Idempotent
------------                           | ---- | ----------
-[ACL][acl]                            | no   | yes
-[BASELINE-CONTROL][baseline-control]  | no   | yes
-[BIND][bind]                          | no   | yes
-CHECKIN[¹][checkin-1][²][checkin-2]   | no   | yes
-[CONNECT][connect]                    | no   | no
-[COPY][copy]                          | no   | yes
-[DELETE][delete]                      | no   | yes
-[GET][get]                            | yes  | yes
-[HEAD][head]                          | yes  | yes
-[LABEL][label]                        | no   | yes
-[LINK][link]                          | no   | yes
-[LOCK][lock]                          | no   | no
-[MERGE][merge]                        | no   | yes
-[MKACTIVITY][mkactivity]              | no   | yes
-[MKCALENDAR][mkcalendar]              | no   | yes
-[MKCOL][mkcol]                        | no   | yes
-[MKREDIRECTREF][mkredirectref]        | no   | yes
-[MKWORKSPACE][mkworkspace]            | no   | yes
-[MOVE][move]                          | no   | yes
-[OPTIONS][options]                    | yes  | yes
-[ORDERPATCH][orderpatch]              | no   | yes
-[PATCH][patch]                        | no   | no
-[POST][post]                          | no   | no
-[PRI][pri]                            | yes  | yes
-[PROPFIND][propfind]                  | yes  | yes
-[PROPPATCH][proppatch]                | no   | yes 
-[PUT][put]                            | no   | yes
-[REBIND][rebind]                      | no   | yes
-[REPORT][report]                      | yes  | yes
-[SEARCH][search]                      | yes  | yes
-[TRACE][trace]                        | yes  | yes
-[UNBIND][unbind]                      | no   | yes
-[UNCHECKOUT][uncheckout]              | no   | yes
-[UNLINK][unlink]                      | no   | yes
-[UNLOCK][unlock]                      | no   | yes
-[UPDATE][update]                      | no   | yes
-[UPDTEREDIRECTREF][updateredirectref] | no   | yes
-[VERSION-CONTROL][version-control]    | no   | yes
+Method name                             | Safe | Idempotent | Description
+-----------                             | ---- | ---------- | -----------
+[ACL][acl]                              | no   | yes        | Modifies the access control list (which can be read via the DAV:acl property) of a resource.
+[BASELINE-CONTROL][baseline-control]    | no   | yes        | Places a collection under baseline control
+[BIND][bind]                            | no   | yes        | Modifies the collection identified by the Request-URI, by adding a new binding from the segment specified in the BIND body to the resource identified in the BIND body.
+CHECKIN [¹][checkin-1] [²][checkin-2]   | no   | yes        | 
+[CONNECT][connect]                      | no   | no         | Requests that the recipient establish a tunnel to the destination origin server identified by the request-target and, if successful, thereafter restrict its behavior to blind forwarding of packets, in both directions, until the tunnel is closed.
+[COPY][copy]                            | no   | yes        | Creates a duplicate of the source resource identified by the Request-URI, in the destination resource identified by the URI in the Destination header.
+[DELETE][delete]                        | no   | yes        | Requests that the origin server remove the association between the target resource and its current functionality.
+[GET][get]                             | yes  | yes        | Requests transfer of a current selected representation for the target resource.
+[HEAD][head]                            | yes  | yes        | Identical to GET except that the server MUST NOT send a message body in the response (i.e., the response terminates at the end of the header section).
+[LABEL][label]                          | no   | yes        | Can be applied to a version to modify the labels that    select that version.
+[LINK][link]                            | no   | yes        | Establishes one or more Link relationships between the existing resource identified by the Request-URI and other existing resources.
+[LOCK][lock]                            | no   | no         | Used to take out a lock of any access type and to refresh an existing lock.
+[MERGE][merge]                          | no   | yes        | Performs the logical merge of a specified version (the "merge source") into a specified version-controlled resource (the "merge target").
+[MKACTIVITY][mkactivity]                | no   | yes        | Creates a new activity resource.
+[MKCALENDAR][mkcalendar]                | no   | yes        | Creates a new calendar collection resource.
+[MKCOL][mkcol]                          | no   | yes        | Creates a new collection resource at the location specified by the Request-URI.
+[MKREDIRECTREF][mkredirectref]          | no   | yes        | Requests the creation of a redirect reference resource.
+[MKWORKSPACE][mkworkspace]              | no   | yes        | Creates a new workspace resource.
+[MOVE][move]                            | no   | yes        | On a non-collection resource is the logical equivalent of a copy (COPY), followed by consistency maintenance processing, followed by a delete of the source, where all three actions are performed in a single operation.
+[OPTIONS][options]                      | yes  | yes        | Requests information about the communication options available for the target resource, at either the origin server or an intervening intermediary.
+[ORDERPATCH][orderpatch]                | no   | yes        | Is used to change the ordering semantics of a collection, to change the order of the collection's members in the ordering, or both.
+[PATCH][patch]                          | no   | no         | That a set of changes described in the request entity be applied to the resource identified by the Request-URI.
+[POST][post]                            | no   | no         | Requests that the target resource process the representation enclosed in the request according to the resource's own specific semantics.
+[PRI][pri]                              | yes  | yes        | Used when an HTTP/1.1 server or intermediary attempts to parse an HTTP/2 connection preface.
+[PROPFIND][propfind]                    | yes  | yes        | Retrieves properties defined on the resource identified by the Request-URI, if the resource does not have any internal members, or on the resource identified by the Request-URI and potentially its member resources, if the resource is a collection that has internal member URLs.
+[PROPPATCH][proppatch]                  | no   | yes        | Processes instructions specified in the request body to set and/or remove properties defined on the resource identified by the Request-URI.
+[PUT][put]                              | no   | yes        | Requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message payload.
+[REBIND][rebind]                        | no   | yes        | Removes a binding to a resource from a collection, and adds a binding to that resource into the collection identified by the Request-URI.
+[REPORT][report]                        | yes  | yes        | An extensible mechanism for obtaining information about a resource.
+[SEARCH][search]                        | yes  | yes        | Initiate a server-side search.
+[TRACE][trace]                          | yes  | yes        | Requests a remote, application-level loop-back of the request message.
+[UNBIND][unbind]                        | no   | yes        | Modifies the collection identified by the Request-URI by removing the binding identified by the segment specified in the UNBIND body.
+[UNCHECKOUT][uncheckout]                | no   | yes        | can be applied to a checked-out version-controlled resource to cancel the CHECKOUT and restore the pre-CHECKOUT state of the version-controlled resource.
+[UNLINK][unlink]                        | no   | yes        | Removes one or more Link relationships from the existing resource identified by the Request-URI.
+[UNLOCK][unlock]                        | no   | yes        | Removes the lock identified by the lock token in the Lock-Token request header.
+[UPDATE][update]                        | no   | yes        | Modifies the content and dead properties of a checked-in version-controlled resource (the "update target") to be those of a specified version (the "update source") from the version history of that version-controlled resource.
+[UPDTEREDIRECTREF][updateredirectref]   | no   | yes        | Requests the update of a redirect reference resource.
+[VERSION-CONTROL][version-control]      | no   | yes        | Can be used to create a version-controlled resource at the request-URL.
 
 [acl]:               http://tools.ietf.org/html/rfc3744#section-8.1
 [baseline-control]:  http://tools.ietf.org/html/rfc3253#section-12.6
