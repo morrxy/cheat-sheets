@@ -21,3 +21,7 @@ Who doesn't love Rich Hickey?
 ## [cURL for RESTful API testing](cURL for RESTful API testing.md)
 
 I don't use any fancy GUI for testing my RESTful APIs.
+
+## [Akka.NET](http://dontcodetired.com/blog/post/Free-AkkaNET-Cheat-Sheet.aspx)
+
+I started to play with Akka recently, might be useful.
